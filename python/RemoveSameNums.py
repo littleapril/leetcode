@@ -11,3 +11,20 @@ class Solution:
             if copy[i]==copy[i+1]:
                 nums.remove(copy[i])
         return len(nums)
+
+================================
+
+class Solution:
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        i = 0
+        a = None
+        for num in nums:
+            if num!=a:
+                nums[i]=num
+                a=num
+                i +=1
+        return i
